@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Memory Game</h1>
+    <div class="menu">
+      <h2>Select Mode</h2>
+      <button onclick="selectMode('single')">Single Player</button>
+      <button onclick="selectMode('multi')">Two Players</button>
+    </div>
+    <div id="grid-size-selection" class="hidden">
+      <h2>Select Grid Size</h2>
+      <button onclick="selectGridSize(4)">4x4</button>
+      <button onclick="selectGridSize(6)">6x6</button>
+      <button onclick="selectGridSize(8)">8x8</button>
+      <button onclick="selectGridSize(10)">10x10</button>
+    </div>
+    <div id="name-input" class="hidden">
+      <div id="player1-name-input">
+        <label for="player1-name">Player 1 Name:</label>
+        <input type="text" id="player1-name">
+      </div>
+      <div id="player2-name-input" class="hidden">
+        <label for="player2-name">Player 2 Name:</label>
+        <input type="text" id="player2-name">
+      </div>
+      <button onclick="startGame()">Start Game</button>
+    </div>
+    <div id="scoreboard" class="hidden">
+      <p id="player1-score"></p>
+      <p id="player2-score" class="hidden"></p>
+      <p id="current-turn" class="hidden"></p>
+    </div>
+    <div id="grid" class="grid hidden"></div>
+    <button id="restart-btn" class="hidden" onclick="restartGame()">Restart Game</button>
+    <div id="winner-display" class="hidden">
+      <h2 id="winner-text"></h2>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
