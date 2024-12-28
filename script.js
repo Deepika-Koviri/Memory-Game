@@ -73,7 +73,7 @@ function revealCard(index) {
 
   const cell = document.querySelector(`[data-index="${index}"]`);
   cell.textContent = gridValues[index];
-  cell.style.backgroundColor = '#28a745';
+  cell.style.backgroundColor = '#671833';
   revealedCards.push(index);
 
   if (revealedCards.length === 2) {
@@ -91,8 +91,8 @@ function checkMatch() {
   } else {
     document.querySelector(`[data-index="${first}"]`).textContent = '';
     document.querySelector(`[data-index="${second}"]`).textContent = '';
-    document.querySelector(`[data-index="${first}"]`).style.backgroundColor = '#007bff';
-    document.querySelector(`[data-index="${second}"]`).style.backgroundColor = '#007bff';
+    document.querySelector(`[data-index="${first}"]`).style.backgroundColor = '#671833';
+    document.querySelector(`[data-index="${second}"]`).style.backgroundColor = '#671833';
     if (gameMode === 'multi') switchTurn();
   }
   revealedCards = [];
